@@ -1,8 +1,32 @@
 <resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DarkBlue</item>
+        <item name="colorPrimaryDark">@color/DividerColor</item>
+        <item name="colorAccent">@color/Orange</item>
+    </style>
 
-	<!-- Base application theme. -->
-	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-		<!-- Customize your theme here. -->
+    <style name="Button_Raised" parent="android:Widget.Button">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="Button_Raised.Primary">
+		<item name="android:background">@drawable/primary_round</item>
+	</style>
+
+	<style name="Button_Raised.Accent">
+		<item name="android:background">@drawable/accent_round</item>
+	</style>
+
+	<style name="Button_Flat.Primary" parent="android:Widget.Button">
+		<item name="android:background">@drawable/primary_flat</item>
+		<item name="android:textColor">@drawable/primary_flat_pressed_text</item>
+	</style>
+
+	<style name="Button_Flat.Accent" parent="android:Widget.Button">
+		<item name="android:background">@drawable/accent_flat</item>
+		<item name="android:textColor">@drawable/accent_flat_pressed_text</item>
 	</style>
 
 </resources>

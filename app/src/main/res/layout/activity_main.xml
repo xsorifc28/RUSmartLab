@@ -6,7 +6,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                android:background="@color/md_amber_300"
+                android:background="@color/accent_300"
                 tools:context=".MainActivity"
                 android:id="@+id/mainLayout">
 
@@ -15,8 +15,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="RU Smart Lab"
-        android:id="@+id/textView"
-        android:textColor="@color/md_brown_700"
+        android:id="@+id/tvTitle"
+        android:textColor="@color/primary_700"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
 
@@ -25,9 +25,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Fan"
-        android:id="@+id/textView2"
+        android:id="@+id/tvFan"
         android:layout_marginTop="33dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/tvTitle"
         android:layout_alignRight="@+id/btn_fanOn"
         android:layout_alignEnd="@+id/btn_fanOn"
         android:gravity="center"
@@ -39,52 +39,58 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Light"
-        android:id="@+id/textView3"
+        android:id="@+id/tvLight"
         android:gravity="center"
         android:layout_above="@+id/btn_lightOn"
-        android:layout_centerHorizontal="true"/>
+        android:layout_alignRight="@+id/alertMsg"
+        android:layout_alignEnd="@+id/alertMsg"
+        android:layout_alignLeft="@+id/btn_lightOn"
+        android:layout_alignStart="@+id/btn_lightOn"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Temp"
-        android:id="@+id/textView4"
+        android:id="@+id/tvTemp"
         android:gravity="center"
         android:layout_above="@+id/btn_lightOn"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginLeft="28dp"
-        android:layout_marginStart="28dp"/>
+        android:layout_toRightOf="@+id/tvTitle"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"/>
 
-    <Button
+    <Button style="@style/Button_Raised.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
         android:id="@+id/btn_fanOn"
-        android:layout_below="@+id/textView2"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView"/>
+        android:layout_below="@+id/tvFan"
+        android:layout_toLeftOf="@+id/tvTitle"
+        android:layout_toStartOf="@+id/tvTitle"
+        android:layout_marginTop="16dp" />
 
-    <Button
+    <Button style="@style/Button_Raised.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
         android:id="@+id/btn_lightOn"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@+id/tvFan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="75C"
         android:id="@+id/tv_temp"
-        android:layout_alignBottom="@+id/btn_lightOn"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="10dp"/>
+        android:gravity="center"
+        android:layout_alignRight="@+id/tvTemp"
+        android:layout_alignEnd="@+id/tvTemp"
+        android:layout_alignLeft="@+id/tvTemp"
+        android:layout_alignStart="@+id/tvTemp"
+        android:layout_alignBottom="@+id/btn_lightOff"
+        android:layout_alignTop="@+id/btn_lightOn"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -114,21 +120,24 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/rowan_logo"/>
 
-    <Button
+    <Button style="@style/Button_Raised.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OFF"
         android:id="@+id/btn_fanOff"
-        android:layout_below="@+id/tv_temp"
-        android:layout_toLeftOf="@+id/alertMsg"
-        android:layout_toStartOf="@+id/alertMsg"/>
+        android:layout_below="@+id/btn_fanOn"
+        android:layout_alignLeft="@+id/btn_fanOn"
+        android:layout_alignStart="@+id/btn_fanOn"
+        android:layout_marginTop="16dp"/>
 
-    <Button
+    <Button style="@style/Button_Raised.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OFF"
         android:id="@+id/btn_lightOff"
-        android:layout_alignTop="@+id/btn_fanOff"
-        android:layout_centerHorizontal="true"/>
+        android:layout_below="@+id/btn_lightOn"
+        android:layout_alignLeft="@+id/btn_lightOn"
+        android:layout_alignStart="@+id/btn_lightOn"
+        android:layout_marginTop="16dp"/>
 
 </RelativeLayout>
